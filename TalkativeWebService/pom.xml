@@ -6,6 +6,63 @@
   <artifactId>TalkativeWebService</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>Talkative Web Service</name>
+  
+  <developers>
+    <developer>
+      <id>raphael</id>
+      <name>Raphaël</name>
+      <email>raphael.marques@epsi.fr</email>
+      <organization>EPSI</organization>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>+1</timezone>
+    </developer>
+
+    <developer>
+      <id>matthieu</id>
+      <name>Matthieu</name>
+      <email>matthieu.pomies@epsi.fr</email>
+      <organization>EPSI</organization>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>+1</timezone>
+    </developer>
+
+    <developer>
+      <id>emmanuel</id>
+      <name>Emmanuel</name>
+      <email>emmanuel.payet@epsi.fr</email>
+      <organization>EPSI</organization>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>+1</timezone>
+    </developer>
+
+    <developer>
+      <id>felix</id>
+      <name>Félix</name>
+      <email>felix.wattez@epsi.fr</email>
+      <organization>EPSI</organization>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>+1</timezone>
+    </developer>
+
+    <developer>
+      <id>frederic</id>
+      <name>Fréderic</name>
+      <email>frederic.delage@epsi.fr</email>
+      <organization>EPSI</organization>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>+1</timezone>
+    </developer>
+  </developers>
 
     <dependencyManagement>
         <dependencies>
