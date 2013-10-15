@@ -21,14 +21,9 @@ public class CommentTest {
     }
 
     @Test
-    public void get() throws IOException {
-        final String message = WebClient.create("http://localhost:9080").path("/TalkativeWebService/hello").get(String.class);
-        assertEquals("Hello World", message);
-    }
-
-    @Test
-    public void post() throws IOException {
-//        final String message = WebClient.create("http://localhost:4204").path("/GreetingServiceTest/greeting/").post("Hi REST!", String.class);
-//        assertEquals("hi rest!", message);
+    public void NewArticleWithGoodEditor_ReturnNoComments() throws IOException {
+        final String result = WebClient.create("http://localhost:9080")
+        		.path("/TalkativeWebService/2/article/65/comments").get(String.class);
+        assertEquals("[]", result);
     }
 }
