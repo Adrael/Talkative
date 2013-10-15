@@ -1,0 +1,34 @@
+package epsi.talkative.webservice.test;
+
+import org.apache.cxf.jaxrs.client.WebClient;
+import org.apache.openejb.jee.SingletonBean;
+import org.apache.openejb.junit.ApplicationComposer;
+import org.apache.openejb.junit.EnableServices;
+import org.apache.openejb.junit.Module;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import java.io.IOException;
+
+import static org.junit.Assert.assertEquals;
+
+@EnableServices(value = "jaxrs")
+@RunWith(ApplicationComposer.class)
+public class CommentTest {
+    @Module
+    public SingletonBean app() {
+        return (SingletonBean) new SingletonBean(CommentTest.class).localBean();
+    }
+
+    @Test
+    public void get() throws IOException {
+        final String message = WebClient.create("http://localhost:9080").path("/TalkativeWebService/hello").get(String.class);
+        assertEquals("Hello World", message);
+    }
+
+    @Test
+    public void post() throws IOException {
+//        final String message = WebClient.create("http://localhost:4204").path("/GreetingServiceTest/greeting/").post("Hi REST!", String.class);
+//        assertEquals("hi rest!", message);
+    }
+}
