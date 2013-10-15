@@ -10,6 +10,8 @@ import org.junit.runner.RunWith;
 
 import java.io.IOException;
 
+import javax.ws.rs.core.Response;
+
 import static org.junit.Assert.assertEquals;
 
 @EnableServices(value = "jaxrs")
@@ -25,5 +27,12 @@ public class CommentTest {
         final String result = WebClient.create("http://localhost:9080")
         		.path("/TalkativeWebService/2/article/65/comments").get(String.class);
         assertEquals("[]", result);
+    }
+    
+    @Test
+    public void ArticleWithGoodEditor_ReturnNoComments() throws IOException {
+    	Response result = WebClient.create("http://localhost:9080")
+        		.path("/TalkativeWebService/3/article/65/comments").get(Response.class);
+    	assertEquals(401, result.getStatus());
     }
 }
