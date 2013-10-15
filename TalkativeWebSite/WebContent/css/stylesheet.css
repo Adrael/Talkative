@@ -1,0 +1,246 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	font-family: "Calibri", serif;
+	line-height: 1;
+	background: #b2e1ff; /* Old browsers */
+	background: -moz-radial-gradient(center, circle cover,  #b2e1ff 0%, #66b6fc 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#b2e1ff), color-stop(100%,#66b6fc)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, circle cover,  #b2e1ff 0%,#66b6fc 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, circle cover,  #b2e1ff 0%,#66b6fc 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, circle cover,  #b2e1ff 0%,#66b6fc 100%); /* IE10+ */
+	background: radial-gradient(circle at center,  #b2e1ff 0%,#66b6fc 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b2e1ff', endColorstr='#66b6fc',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+header {
+	z-index: 100;
+	height: 10%;
+	width: 100%;
+	background: gray;
+	margin: auto;
+	text-align: center;
+	background: darkgray;
+}
+
+h1 {
+	font-size: 3.77em;
+}
+
+.subheader {
+	padding-top: 10px;
+	padding-left: 20px;
+	height: 30px;
+	background-color: gray;
+	width: 100%;
+	box-shadow: 0px 1px 6px black;
+	font-weight: bold;
+}
+
+.subheader .pseudo {
+	float: left;
+	color: lightblue;
+}
+
+.subheader .function {
+	margin-left: 20px;
+	color: lightgreen;
+}
+
+.subheader .disconnect {
+	margin-left: 20px;
+	color: pink;
+}
+
+.content {
+	width: 960px;
+	height: 100%;
+	margin: auto;
+}
+
+.comments_list {
+	margin-top: 50px;
+	width: 100%;
+	padding-top: 10px;
+}
+
+.article .header, .comments_list .header {
+	font-family: "Segoe Print", serif;
+	font-size: 1.5em;
+	z-index: -1;
+}
+
+.comments_list .comments {
+	margin-top: -3px;
+}
+
+.comments_list .comments .comment {
+	min-height: 40px;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+	background-color: white;
+	padding: 10px;
+	padding-bottom: 20px;
+	width: 100%;
+}
+
+.comments_list .comments div:last-child {
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+.comments_list .comments div:first-child {
+	border-top: 1px solid black;
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+}
+
+.comments_list .comments .comment .pseudo, .article .text .author {
+	font-weight: bold;
+	text-align: left;
+}
+
+.comments_list .comments .comment .date, .article .text .date {
+	float: right;
+	text-align: right;
+}
+
+.comments_list .comments .comment .text {
+	position: relative;
+	top: 10px;
+}
+
+.post_comment {
+	margin-top: 50px;
+}
+
+.article {
+	margin-top: 50px;
+	width: 100%;
+}
+
+.article p {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.article .text{
+	z-index: 100;
+	margin-top: -3px;
+	background: white;
+	border: 1px solid black;
+	padding: 10px;
+	width: 100%;
+	border-radius: 3px;
+	line-height: 1.3em;
+}
+
+.article .text h2 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 2em;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.article .text .firstLetter {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.article .text .alinea {
+	margin-left: 20px;
+}
+
+form {
+	position: relative;
+	display: block;
+	width: 50%;
+	margin: auto;
+}
+
+form input[type="text"], textarea {
+	border: 1px solid black;
+	border-radius: 3px;
+	width: 100%;
+	margin-top: 5px;
+	height: 20px;
+	padding: 5px;
+	font-family: "Arial", serif;
+}
+
+form textarea {
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+form input[type="text"]:focus, textarea:focus {
+	border: 1px solid yellow;
+	box-shadow: 0px 0px 10px 1px orange;
+}
+
+form label {
+	font-weight: bold;
+}
+
+form button {
+	border: 1px solid white;
+	color: white;
+	padding: 5px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+form button.send {
+	background-color: green;
+}
+
+form button.send:hover {
+	background-color: lightgreen;
+	color: green;
+	border-color: green;
+}
+
+form button.cancel {
+	background-color: red;
+}
+
+form button.cancel:hover {
+	background-color: pink;
+	color: red;
+	border-color: red;
+}
+
+footer{
+	box-shadow: 0px -1px 6px black;
+	min-height: 100px;
+	margin-top: 30px;
+	padding: 10px;
+	width: 100%;
+   	background: darkgray;
+}
+
+#copyright {
+	width: 100%;
+	position: absolute;
+	font-weight: bold;
+	bottom: 0;
+}
+
+#contacts, #values, #footer_links {
+	width: 20%;
+	margin-left: 10%;
+	text-align: justify;
+	float: left;
+}
