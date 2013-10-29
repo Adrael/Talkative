@@ -25,14 +25,14 @@ public class CommentTest {
     @Test
     public void NewArticleWithGoodEditor_ReturnNoComments() throws IOException {
         final String result = WebClient.create("http://localhost:9080")
-        		.path("/TalkativeWebService/2/article/65/comments").get(String.class);
+        		.path("/TalkativeWebService/editor/2/article/65/comments").get(String.class);
         assertEquals("[]", result);
     }
     
     @Test
     public void ArticleWithGoodEditor_ReturnNoComments() throws IOException {
     	Response result = WebClient.create("http://localhost:9080")
-        		.path("/TalkativeWebService/3/article/65/comments").get(Response.class);
+        		.path("/TalkativeWebService/editor/3/article/65/comments").get(Response.class);
     	assertEquals(401, result.getStatus());
     }
 }
