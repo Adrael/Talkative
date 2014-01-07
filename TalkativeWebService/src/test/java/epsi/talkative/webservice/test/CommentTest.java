@@ -32,7 +32,7 @@ public class CommentTest {
 	}
     
     @Test
-    public void ArticleWithGoodEditor_ReturnNoComments() throws IOException {
+    public void articleWithNotExistingEditor_ReturnsUnauthorized() throws IOException {
 		WebClient client = createClient();
 		Response result = client.path("editors/3/articles/65/comments").get(Response.class);
     	assertEquals(401, result.getStatus());
