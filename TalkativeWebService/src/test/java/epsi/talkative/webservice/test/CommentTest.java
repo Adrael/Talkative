@@ -25,14 +25,14 @@ public class CommentTest {
     }
 
     @Test
-    public void NewArticleWithGoodEditor_ReturnNoComments() throws IOException {
+	public void newArticleWithGoodEditor_ReturnsNoComments() throws IOException {
 		WebClient client = createClient();
 		Response result = client.path("editors/2/articles/65/comments").get(Response.class);
 		assertEquals(204, result.getStatus());
 	}
     
     @Test
-    public void articleWithNotExistingEditor_ReturnsUnauthorized() throws IOException {
+	public void articleWithNotExistingEditor_ReturnsUnauthorized() throws IOException {
 		WebClient client = createClient();
 		Response result = client.path("editors/3/articles/65/comments").get(Response.class);
     	assertEquals(401, result.getStatus());
