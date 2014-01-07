@@ -15,6 +15,10 @@ public class Editor {
 
 	}
 
+	public Editor(String name) {
+		this.setName(name);
+	}
+
 	public String getName() {
 		return name;
 	}

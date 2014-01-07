@@ -19,7 +19,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import epsi.talkative.webservice.beans.Editor;
-import epsi.talkative.webservice.resources.EditorResource;
+import epsi.talkative.webservice.resources.EditorsResource;
 
 @RunWith(ApplicationComposer.class)
 @EnableServices("jaxrs")
@@ -27,21 +27,21 @@ public class EditorTest {
 
 	@Module
 	public SingletonBean app() {
-		return (SingletonBean) new SingletonBean(EditorResource.class).localBean();
+		return (SingletonBean) new SingletonBean(EditorsResource.class).localBean();
 	}
 
 	@Test
 	public void getExistingEditor() {
 		WebClient client = createClient();
 		Editor editor = client.path("/editors/2").get(Editor.class);
-		assertEquals("test", editor.getName());
+		assertEquals("2", editor.getName());
 	}
 	
 	@Test
 	public void getUnexistingEditor() {
 		WebClient client = createClient();
 		Response response = client.path("/editors/3").get(Response.class);
-		assertEquals(404, response.getStatus());
+		assertEquals(401, response.getStatus());
 	}
 
 	private WebClient createClient() {
