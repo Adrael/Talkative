@@ -9,17 +9,19 @@ import javax.ws.rs.core.Response;
 import org.apache.cxf.jaxrs.client.WebClient;
 import org.apache.openejb.jee.SingletonBean;
 import org.apache.openejb.junit.ApplicationComposer;
-import org.apache.openejb.junit.EnableServices;
-import org.apache.openejb.junit.Module;
+import org.apache.openejb.testing.EnableServices;
+import org.apache.openejb.testing.Module;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import epsi.talkative.webservice.resources.CommentResource;
 
 @RunWith(ApplicationComposer.class)
 @EnableServices("jaxrs")
 public class CommentTest {
     @Module
     public SingletonBean app() {
-        return (SingletonBean) new SingletonBean(CommentTest.class).localBean();
+        return (SingletonBean) new SingletonBean(CommentResource.class).localBean();
     }
 
     @Test
@@ -37,7 +39,7 @@ public class CommentTest {
     }
 
 	private WebClient createClient() {
-		return WebClient.create("http://localhost:9090/TalkativeWebService/");
+		return WebClient.create("http://localhost:4204/CommentTest");
 	}
 
 }
